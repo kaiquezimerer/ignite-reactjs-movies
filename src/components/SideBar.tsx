@@ -1,13 +1,8 @@
 import { Button } from './Button';
-
-type Genre = {
-  id: number;
-  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-  title: string;
-};
+import { GenreResponseProps } from '../App';
 
 interface SideBarProps {
-  genres: Genre[];
+  genres: GenreResponseProps[];
   selectedGenreId: number;
   setSelectedGenreId: (id: number) => void;
 }

@@ -1,16 +1,10 @@
 
 import { MovieCard } from './MovieCard';
 
-type Movie = {
-  imdbID: string;
-  Title: string;
-  Poster: string;
-  Runtime: string;
-  Ratings: any;
-};
+import { MovieProps } from '../App';
 
 interface ContentProps {
-  movies: Movie[];
+  movies: MovieProps[];
   selectedGenre: {
     title: string;
   };
