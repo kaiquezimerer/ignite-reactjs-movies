@@ -1,11 +1,28 @@
 
 import { MovieCard } from './MovieCard';
 
-export function Content({ movies, selectedGenre }) {
+type Movie = {
+  imdbID: string;
+  Title: string;
+  Poster: string;
+  Runtime: string;
+  Ratings: any;
+};
+
+interface ContentProps {
+  movies: Movie[];
+  selectedGenre: {
+    title: string;
+  };
+}
+
+export function Content({ movies, selectedGenre }: ContentProps) {
   return (
     <div className="container">
       <header>
-        <span className="category">Categoria:<span> {selectedGenre.title}</span></span>
+        <span className="category">
+          Categoria:<span> {selectedGenre.title}</span>
+        </span>
       </header>
       <main>
         <div className="movies-list">
